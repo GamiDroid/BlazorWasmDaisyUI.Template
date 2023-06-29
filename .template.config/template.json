@@ -1,8 +1,14 @@
 {
   "$schema": "http://json.schemastore.org/template",
   "author": "GamiDroid",
-  "classifications": [ "Blazor", "WebAssembly", "ASPNET", "Tailwindcss", "DaisyUI" ],
+  "classifications": [ "Web", "Blazor", "WebAssembly", "PWA", "DaisyUI" ],
   "identity": "BlazorWebAssembly.DaisyUI.Hosted",
-  "name": "Blazor WebAssembly with DaisyUI styling.",
-  "shortName": "blazorwasmdaisyui"
+  "name": "Blazor WebAssembly DaisyUI",
+  "shortName": "blazorwasm-daisyui",
+  "tags": {
+    "language": "C#",                         
+    "type":"project"
+  },
+  "sourceName": "BlazorWasmDaisyUI.Template",
+  "preferNameDirectory": true
 }
