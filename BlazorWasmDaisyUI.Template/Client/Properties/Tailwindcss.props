@@ -1,0 +1,19 @@
+<Project xmlns='http://schemas.microsoft.com/developer/msbuild/2003'>
+    <Target Name="CheckForNpm" BeforeTargets="NpmInstall">
+        <Exec Command="npm -v" ContinueOnError="true">
+            <Output TaskParameter="ExitCode" PropertyName="ErrorCode" />
+        </Exec>
+        <Error Condition="'$(ErrorCode)' != '0'" Text="You must install NPM to build this project" />
+    </Target>
+
+    <Target Name="NpmInstall" Inputs="package.json" Outputs="node_modules/.install-stamp">
+        <Exec Command="npm ci" ContinueOnError="true"/>
+        <Touch Files="node_modules/.install-stamp" AlwaysCreate="true" />
+    </Target>
+
+    <Target Name="NpmRunTailwindBuild" DependsOnTargets="NpmInstall" BeforeTargets="BeforeBuild" Outputs="node_modules/.tailwind-stamp">
+        <Message Text="Building the css files" Importance="high" />
+        <Exec Command="npm run buildcss:$(Configuration)" />
+        <Touch Files="node_modules/.tailwind-stamp" AlwaysCreate="true" />
+    </Target>
+</Project>
