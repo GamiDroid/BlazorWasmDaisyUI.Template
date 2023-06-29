@@ -361,4 +361,4 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
-/BlazorWasmDaisyUI.Template/Client/wwwroot/css/tailwindcss.css
+/template/BlazorWasmDaisyUI.Template/Client/wwwroot/css/tailwindcss.css
