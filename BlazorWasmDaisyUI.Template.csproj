@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<PackageType>Template</PackageType>
+		<PackageVersion>1.0</PackageVersion>
+		<PackageId>BlazorWasm.DaisyUI.Template</PackageId>
+		<Title>Blazor WebAssembly DaisyUI Template</Title>
+		<Authors>GamiDroid</Authors>
+		<Description>Project template for Blazor WebAssembly with DaisyUI styling.</Description>
+		<PackageTags>dotnet-new;templates</PackageTags>
+
+		<TargetFramework>netstandard2.0</TargetFramework>
+
+		<IncludeContentInPack>true</IncludeContentInPack>
+		<IncludeBuildOutput>false</IncludeBuildOutput>
+		<ContentTargetFolders>content</ContentTargetFolders>
+		<NoWarn>$(NoWarn);NU5128</NoWarn>
+		<NoDefaultExcludes>true</NoDefaultExcludes>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Content Include="template\**\*" Exclude="template\**\bin\**;templates\**\obj\**" />
+		<Compile Remove="**\*" />
+	</ItemGroup>
+</Project>
