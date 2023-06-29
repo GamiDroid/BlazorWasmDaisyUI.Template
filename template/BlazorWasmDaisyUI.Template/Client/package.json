@@ -4,7 +4,6 @@
     "buildcss:Release": "npx tailwindcss -i ./wwwroot/css/tailwindcss.input.css -o ./wwwroot/css/tailwindcss.css --minify"
   },
   "dependencies": {
-    "@tailwindcss/typography": "^0.5.9",
     "daisyui": "3.1.7",
     "tailwindcss-textshadow": "^2.1.3"
   }
